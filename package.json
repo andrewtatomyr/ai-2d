@@ -18,6 +18,6 @@
   "homepage": "https://github.com/andrewtatomyr/ai#readme",
   "dependencies": {
     "express": "^4.13.3",
-    "body-parser"   : "*",
+    "body-parser"   : "*"
   }
 }
