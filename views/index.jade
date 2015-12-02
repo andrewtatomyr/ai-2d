@@ -1,0 +1,25 @@
+html
+	head
+		title TEST
+		link(href='style.css', rel='stylesheet')
+		script(src='jquery-1.11.2.min.js')
+		script(src='jquery-cookie-master/src/jquery.cookie.js')
+		script(src='environment.js')
+
+
+	body(onkeyup="actionHandler(event)" class="activeToListenKey" )
+
+		div()
+			table( border=1 cellspacing=0 class="shell" )
+				- for (var i=H-1; i>=0; i--) {
+					tr
+						- for (var j=0; j<W; j++) {
+							td(id="c"+i+"-"+j onclick="manipulate({ i:"+i+", j:"+j+" }, this)" )
+						- }
+				- }
+
+			table( cellspacing=1  border=1 class="inventory" )
+				tr
+					- for (var n=1; n<=9; n++) {
+						td(id="inv"+n onclick="choose("+n+")" class="active" ) $
+					- }
