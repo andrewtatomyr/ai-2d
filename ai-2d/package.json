@@ -18,6 +18,7 @@
   "homepage": "https://github.com/andrewtatomyr/ai-2d#readme",
   "dependencies": {
     "express": "^4.13.3",
-    "body-parser": "*"
+    "body-parser": "*",
+    "jade": "*"
   }
 }
