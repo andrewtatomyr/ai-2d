@@ -243,6 +243,7 @@ app.get('/api/refresh', function(req,res) { //refresh situation
 
 });
 //------------------------------------------------------------------------------
+/*
 var server = app.listen(3000, function () {
 
   var host = server.address().address;
@@ -250,4 +251,9 @@ var server = app.listen(3000, function () {
 
   console.log('App listening at http://%s:%s', host, port);
 
+});
+*/
+app.set('port', (process.env.PORT || 3000));//
+app.listen(app.get('port'), function() {
+  console.log("Node app is running at localhost:" + app.get('port'));
 });
